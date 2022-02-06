@@ -10,7 +10,7 @@ public class Movie {
 
     @Id
     @Column(name="ID")
-    private Long id;
+    private String id;
 
     @Column(name="TITLE")
     private String title;
@@ -21,11 +21,11 @@ public class Movie {
     @OneToMany(mappedBy = "movie",cascade = CascadeType.ALL)
     private Set<SeenMovie> users;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

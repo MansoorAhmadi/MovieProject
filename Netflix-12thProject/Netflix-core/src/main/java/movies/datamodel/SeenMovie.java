@@ -9,7 +9,7 @@ public class SeenMovie {
 
     @Id
     @Column(name="ID")
-    private long id;
+    private String id;
 
     @Column(name="DATE")
     private Date date;
@@ -31,11 +31,11 @@ public class SeenMovie {
     public SeenMovie() {
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

@@ -12,7 +12,7 @@ public class Address {
 
     @Id
     @Column(name="ID")
-    private long id;
+    private String id;
 
     @Column(name="COUNTRY")
     private String country;
@@ -29,11 +29,11 @@ public class Address {
     @Column(name="NUMBER")
     private String number;
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

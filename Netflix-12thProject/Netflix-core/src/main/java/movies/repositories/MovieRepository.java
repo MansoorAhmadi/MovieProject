@@ -1,16 +1,11 @@
 package movies.repositories;
 
-import movies.datamodel.Contact;
 
-import java.util.List;
+import movies.datamodel.Movie;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface MovieRepository {
-    void create(T object);
-
-    void update(T obj);
-
-    void delete(T obj);
-
-    List<Contact> search (T obj);
+@Repository
+public interface MovieRepository extends CrudRepository<Movie, String> {
 
 }
