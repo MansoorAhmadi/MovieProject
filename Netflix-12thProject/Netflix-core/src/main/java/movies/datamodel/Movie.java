@@ -1,20 +1,57 @@
 package movies.datamodel;
 
+import javax.persistence.*;
+import java.util.Date;
+import java.util.Set;
+
+@Entity
+@Table(name="MOVIE")
 public class Movie {
-    private String name;
 
-    public String getName() {
-        return name;
+    @Id
+    @Column(name="ID")
+    private Long id;
+
+    @Column(name="TITLE")
+    private String title;
+
+    @Column(name="DATE")
+    private Date date;
+
+    @OneToMany(mappedBy = "movie",cascade = CascadeType.ALL)
+    private Set<SeenMovie> users;
+
+    public Long getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public Movie() {
+    public String getTitle() {
+        return title;
     }
 
-    public Movie(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", date=" + date +
+                ", users=" + users +
+                '}';
     }
 }
