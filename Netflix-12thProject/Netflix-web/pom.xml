@@ -61,6 +61,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+
+<!--                //@SpringBootApplication symbol not detected issues - fixed with adding version in Netflix-Wev-->
+                <version>2.5.3</version>
             </plugin>
         </plugins>
     </build>
